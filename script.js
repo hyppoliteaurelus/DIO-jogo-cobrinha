@@ -6,6 +6,8 @@ snake[0] = {
     x: 8 * box,
     y: 8 * box
 }
+
+
 let direction = "right";
 let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
@@ -32,10 +34,10 @@ function drawfood(){
 document.addEventListener('keydown', update); // quando um evento acontece, detecta e chama uma função
 
 function update(event){
-    if(event.keycode == 37 && direction != "right") direction = "left";
-    if(event.keycode == 38 && direction != "down") direction = "up";
-    if(event.keycode == 39 && direction != "left") direction = "right";
-    if(event.keycode == 40 && direction != "up") direction = "down";
+    if(event.keyCode == 37 && direction != "right") direction = "left";
+    if(event.keyCode == 38 && direction != "down") direction = "up";
+    if(event.keyCode == 39 && direction != "left") direction = "right";
+    if(event.keyCode == 40 && direction != "up") direction = "down";
 }
 
 function iniciarJogo(){
